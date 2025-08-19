@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  .background {
+    background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+  
+  .couple {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+    animation: walk-across 10s linear infinite;
+  }
+  
+  .person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: bounce 0.5s ease-in-out infinite;
+  }
+  
+  .head {
+    width: 40px;
+    height: 40px;
+    background: #fddde6;
+    border-radius: 50%;
+    border: 2px solid #333;
+  }
+  
+  .body {
+    width: 20px;
+    height: 50px;
+    background: #333;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
+  .girl .body {
+    background: hotpink;
+  }
+  
+  .boy .body {
+    background: royalblue;
+  }
+  
+  .hand-hold {
+    width: 20px;
+    height: 5px;
+    background: #fddde6;
+    margin: 0 5px;
+    border-radius: 10px;
+    margin-top: -10px;
+    animation: sway 0.5s ease-in-out infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  @keyframes sway {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+  }
+  
+  @keyframes walk-across {
+    0% {
+      left: -150px;
+    }
+    100% {
+      left: 110%;
+    }
+  }
+  
